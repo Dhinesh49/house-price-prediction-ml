@@ -1,0 +1,105 @@
+
+# ==============================
+# Python virtual environments
+# ==============================
+.venv/
+venv/
+env/
+ENV/
+
+# ==============================
+# Python cache and compiled files
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==============================
+# Environment variables and secrets
+# ==============================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+service-account*.json
+
+# ==============================
+# Jupyter Notebook
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# IDE and OS files
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+logs/
+tmp/
+temp/
+
+# ==============================
+# MLflow local tracking data
+# ==============================
+mlruns/
+mlflow.db
+mlflow.db-journal
+mlflow.db-wal
+mlflow.db-shm
+
+# ==============================
+# Model artifacts
+# Review before committing models
+# ==============================
+models/*.pkl
+models/*.joblib
+models/*.model
+models/*.ubj
+models/*.json
+
+# ==============================
+# Data files
+# Ignore local datasets by default
+# Keep the directories using .gitkeep if needed
+# ==============================
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ==============================
+# Python build artifacts
+# ==============================
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Coverage reports
+# ==============================
+.coverage
+htmlcov/
+
+# ==============================
+# Terraform state, if used later
+# ==============================
+*.tfstate
+*.tfstate.*
+
+# Local AI coding assistant settings
+.agents/
+.claude/
+tests/smoke_test_.ipynb
