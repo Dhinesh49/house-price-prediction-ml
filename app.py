@@ -9,7 +9,7 @@ from pathlib import Path
 # Config
 # ============================
 
-API_URL = "http://houseprice-api:8000/predict"
+API_URL = os.getenv("API_URL", "http://houseprice-api:8000/predict")
 S3_BUCKET = os.getenv("S3_BUCKET", "housing-regression-data")
 REGION = os.getenv("AWS_REGION", "eu-west-2")
 
