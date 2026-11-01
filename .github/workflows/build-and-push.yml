@@ -51,3 +51,16 @@ jobs:
             -t $ECR_REGISTRY/house-price-streamlit:latest .
           docker push $ECR_REGISTRY/house-price-streamlit:$IMAGE_TAG
           docker push $ECR_REGISTRY/house-price-streamlit:latest
+      - name: Deploy API to ECS
+        run: |
+          aws ecs update-service \
+            --cluster house-price-cluster \
+            --service house-price-api-service \
+            --force-new-deployment
+
+      - name: Deploy Streamlit to ECS
+        run: |
+          aws ecs update-service \
+            --cluster house-price-cluster \
+            --service house-price-streamlit-service \
+            --force-new-deployment
